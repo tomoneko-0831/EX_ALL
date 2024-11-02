@@ -30,7 +30,7 @@ VSCode と Docker, Git のダウンロード，およびインストール
 以下のコードを任意のディレクトリで実行します．
 
 ```
-git clone https://github.com/tomoneko-0831/ex_dev.git
+git clone https://github.com/tomoneko-0831/EX_ALL.git
 ```
 
 #### VSCode の拡張機能のインストール
@@ -88,7 +88,7 @@ Download and install VSCode, Docker and Git.
 
 Run the following code in any directory.  
 ```
-git clone https://github.com/tomoneko-0831/ex_dev.git
+git clone https://github.com/tomoneko-0831/EX_ALL.git
 ```
 
 #### Installing The VSCode Extension
