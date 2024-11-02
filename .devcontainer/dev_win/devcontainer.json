@@ -1,0 +1,40 @@
+{
+    "name": "dev_win",
+    "dockerComposeFile":"./../../docker-compose.yml",
+    "service": "dev_win",
+    "runServices": [
+        "dev_win"
+    ],
+    "profiles":{
+        "ex_c": {
+            "service": "ex_c_cpp"
+        },
+        "ex_cpp": {
+            "service": "ex_c_cpp"
+        },
+        "ex_java": {
+            "service": "ex_java"
+        },
+        "ex_js": {
+            "service": "ex_js"
+        },
+        "ex_py": {
+            "service": "ex_py"
+        },
+        "dev_win": {
+            "service": "dev_win"
+        }
+    },
+    "workspaceFolder": "/dev_win",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools-extension-pack",
+                "oderwat.indent-rainbow",
+                "ms-vscode-remote.remote-containers",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+    "shutdownAction": "stopCompose"
+}

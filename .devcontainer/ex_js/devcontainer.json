@@ -1,0 +1,40 @@
+{
+    "name": "ex_js",
+    "dockerComposeFile":["./../../docker-compose.yml"],
+    "service": "ex_js",
+    "runServices": [
+        "ex_js"
+    ],
+    "profiles":{
+        "ex_c": {
+            "service": "ex_c_cpp"
+        },
+        "ex_cpp": {
+            "service": "ex_c_cpp"
+        },
+        "ex_java": {
+            "service": "ex_java"
+        },
+        "ex_js": {
+            "service": "ex_js"
+        },
+        "ex_py": {
+            "service": "ex_py"
+        },
+        "dev_win": {
+            "service": "dev_win"
+        }
+    },
+    "workspaceFolder": "/JavaScript/",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "xabikos.JavaScriptSnippets",
+                "oderwat.indent-rainbow",
+                "ms-vscode-remote.remote-containers",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+    "shutdownAction": "stopCompose"
+}

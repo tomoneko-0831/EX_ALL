@@ -1,0 +1,40 @@
+{
+    "name": "ex_c",
+    "dockerComposeFile":"./../../docker-compose.yml",
+    "service": "ex_c",
+    "runServices": [
+        "ex_c"
+    ],
+    "profiles":{
+        "ex_c": {
+            "service": "ex_c"
+        },
+        "ex_cpp": {
+            "service": "ex_c_cpp"
+        },
+        "ex_java": {
+            "service": "ex_java"
+        },
+        "ex_js": {
+            "service": "ex_js"
+        },
+        "ex_py": {
+            "service": "ex_py"
+        },
+        "dev_win": {
+            "service": "dev_win"
+        }
+    },
+    "workspaceFolder": "/C",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools-extension-pack",
+                "oderwat.indent-rainbow",
+                "ms-vscode-remote.remote-containers",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+    "shutdownAction": "stopCompose"
+}

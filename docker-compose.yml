@@ -1,0 +1,104 @@
+services:
+  ex_c:
+    container_name: ex_c
+    profiles:
+      - ex_c_cpp
+    build:
+      context: ./ex_c
+      dockerfile: ./../.devcontainer/Dockerfile
+      target: ex_c_cpp
+    env_file:
+      - ./.devcontainer/.env
+    volumes:
+      - "./ex_c:/C/"
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /mnt/wslg:/mnt/wslg
+    tty: true
+    network_mode: host
+
+  ex_cpp:
+    container_name: ex_cpp
+    profiles:
+      - ex_c_cpp
+    build:
+      context: ./ex_cpp
+      dockerfile: ./../.devcontainer/Dockerfile
+      target: ex_c_cpp
+    env_file:
+      - ./.devcontainer/.env
+    volumes:
+      - "./ex_cpp:/Cpp/"
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /mnt/wslg:/mnt/wslg
+    tty: true
+    network_mode: host
+
+  ex_java:
+    container_name: ex_java
+    profiles:
+      - ex_java
+    build:
+      context: ./ex_java
+      dockerfile: ./../.devcontainer/Dockerfile
+      target: ex_java
+    env_file:
+      - ./.devcontainer/.env
+      - ./.devcontainer/ex_java/.env
+    volumes:
+      - "./ex_java:/Java/"
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /mnt/wslg:/mnt/wslg
+    tty: true
+    network_mode: host
+
+  ex_py:
+    container_name: ex_py
+    profiles:
+      - ex_py
+    build:
+      context: ./ex_py
+      dockerfile: ./../.devcontainer/Dockerfile
+      target: ex_py
+    env_file:
+      - ./.devcontainer/.env
+      - ./.devcontainer/ex_python/.env
+    volumes:
+      - "./ex_py:/Python/"
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /mnt/wslg:/mnt/wslg
+    tty: true
+    network_mode: host
+
+  ex_js:
+    container_name: ex_js
+    profiles:
+      - ex_js
+    build:
+      context: ./ex_js/
+      dockerfile: ./../.devcontainer/Dockerfile
+      target: ex_js
+    env_file:
+      - ./.devcontainer/.env
+    volumes:
+      - "./ex_js:/JavaScript/"
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /mnt/wslg:/mnt/wslg
+    tty: true
+    network_mode: host
+
+  dev_win:
+    container_name: dev_win
+    profiles:
+      - dev_win
+    build:
+      context: ./dev_win
+      dockerfile: ./../.devcontainer/Dockerfile
+      target: dev_win
+    env_file:
+      - ./.devcontainer/.env
+    volumes:
+      - "./dev_win:/dev_win/"
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /mnt/wslg:/mnt/wslg
+    tty: true
+    network_mode: host

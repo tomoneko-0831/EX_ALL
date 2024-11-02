@@ -1,0 +1,40 @@
+{
+    "name": "ex_java",
+    "dockerComposeFile":["./../../docker-compose.yml"],
+    "service": "ex_java",
+    "runServices": [
+        "ex_java"
+    ],
+    "profiles":{
+        "ex_c": {
+            "service": "ex_c_cpp"
+        },
+        "ex_cpp": {
+            "service": "ex_c_cpp"
+        },
+        "ex_java": {
+            "service": "ex_java"
+        },
+        "ex_js": {
+            "service": "ex_js"
+        },
+        "ex_py": {
+            "service": "ex_py"
+        },
+        "dev_win": {
+            "service": "dev_win"
+        }
+    },
+    "workspaceFolder": "/Java/",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vscjava.vscode-java-pack",
+                "oderwat.indent-rainbow",
+                "ms-vscode-remote.remote-containers",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+    "shutdownAction": "stopCompose"
+}
