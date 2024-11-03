@@ -1,3 +1,6 @@
 [submodule "ex_c"]
 	path = ex_c
 	url = https://github.com/tomoneko-0831/ex_C_lang.git
+[submodule "ex_java"]
+    path = ex_java
+    url = https://github.com/tomoneko-0831/ex_Java.git
