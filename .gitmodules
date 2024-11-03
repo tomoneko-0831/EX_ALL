@@ -1,0 +1,3 @@
+[submodule "ex_c"]
+	path = ex_c
+	url = https://github.com/tomoneko-0831/ex_C_lang.git
