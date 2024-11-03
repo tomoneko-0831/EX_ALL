@@ -4,3 +4,15 @@
 [submodule "ex_java"]
 	path = ex_java
 	url = https://github.com/tomoneko-0831/ex_Java.git
+[submodule "ex_py"]
+	path = ex_py
+	url = https://github.com/tomoneko-0831/ex_Python.git
+[submodule "ex_cpp"]
+	path = ex_cpp
+	url = https://github.com/tomoneko-0831/ex_Cpp.git
+[submodule "ex_js"]
+	path = ex_js
+	url = https://github.com/tomoneko-0831/ex_JavaScript.git
+[submodule "dev_win"]
+	path = dev_win
+	url = https://github.com/tomoneko-0831/dev_win.git
