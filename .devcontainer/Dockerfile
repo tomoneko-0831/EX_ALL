@@ -2,10 +2,13 @@ FROM ubuntu:24.04 AS base
 
 RUN apt-get update && apt-get -y upgrade
 
-RUN apt-get install -y make sudo git vim nkf x11-xserver-utils wget unzip curl
+RUN apt-get install -y make sudo git vim nkf x11-xserver-utils wget unzip curl language-pack-ja-base language-pack-ja ibus-mozc
 
 RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
+RUN echo 'export LANG=ja_JP.UTF-8' >> ~/.bashrc
+
+RUN echo 'export LANGUAGE="ja_JP:ja"' >> ~/.bashrc
 
 FROM base AS ex_c_cpp
 
